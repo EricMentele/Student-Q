@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 
+#define studentQURL @"https://studentq.firebaseio.com"
 @interface ViewController ()
 
 @end
@@ -17,6 +18,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.firebase = [[Firebase alloc] initWithUrl:studentQURL];
+    // Create a reference to a Firebase location
+    
+    [_firebase setValue:@"Do you have data? You'll love Firebase."];
 }
 
 - (void)didReceiveMemoryWarning {
