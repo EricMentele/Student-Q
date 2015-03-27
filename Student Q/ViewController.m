@@ -12,6 +12,7 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
@@ -31,6 +32,10 @@
     
 }
 
+- (IBAction)addStudent:(id)sender {
+    
+    
+}
 
 #pragma mark Table View methods
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

@@ -2,9 +2,10 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="mYL-3f-arr">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Queue-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -17,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="57" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Czd-OY-BEy">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="studentCell" rowHeight="57" id="msd-2p-gah">
@@ -29,23 +30,45 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOk-qy-zzd">
+                                <rect key="frame" x="16" y="64" width="288" height="61"/>
+                                <state key="normal" title="Enqueue">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addStudent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Czd-mj-5YC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Czd-OY-BEy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Dj4-0B-UbN"/>
-                            <constraint firstItem="Czd-OY-BEy" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Mfa-3V-Rpc"/>
-                            <constraint firstAttribute="trailing" secondItem="Czd-OY-BEy" secondAttribute="trailing" id="dDr-yY-ahO"/>
-                            <constraint firstItem="Czd-OY-BEy" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="lmQ-KC-QpJ"/>
+                            <constraint firstItem="Czd-OY-BEy" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="FZT-4C-2tL"/>
+                            <constraint firstAttribute="trailing" secondItem="Czd-OY-BEy" secondAttribute="trailing" id="VCE-NT-w9d"/>
+                            <constraint firstItem="rOk-qy-zzd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Yao-EZ-3MB"/>
+                            <constraint firstItem="Czd-OY-BEy" firstAttribute="centerX" secondItem="rOk-qy-zzd" secondAttribute="centerX" id="amq-pN-bRz"/>
+                            <constraint firstItem="Czd-OY-BEy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bRN-9n-hIG"/>
+                            <constraint firstItem="rOk-qy-zzd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="j2d-1Z-cw6"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rOk-qy-zzd" secondAttribute="bottom" constant="443" id="j6z-f6-kwE"/>
+                            <constraint firstItem="Czd-OY-BEy" firstAttribute="top" secondItem="rOk-qy-zzd" secondAttribute="top" id="m4A-ab-yzk"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Queue" id="2DZ-oB-j6a"/>
+                    <navigationItem key="navigationItem" id="2DZ-oB-j6a">
+                        <nil key="title"/>
+                        <textField key="titleView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" id="Qg8-r6-qYu">
+                            <rect key="frame" x="47" y="7" width="226" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </navigationItem>
                     <connections>
+                        <outlet property="nameTextField" destination="Qg8-r6-qYu" id="OEx-5C-FAJ"/>
                         <outlet property="tableView" destination="Czd-OY-BEy" id="ahF-mB-wfq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="658" y="319"/>
+            <point key="canvasLocation" x="706" y="319"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="k6G-l5-wVT">
