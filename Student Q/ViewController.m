@@ -17,23 +17,22 @@
 
 @end
 
-@implementation ViewController
+@implementation ViewController 
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     
-//+++++++++++++++++++++++++++++++FIREBASE++++++++++++++++++++++++++++++++++++++++
-    // Do any additional setup after loading the view, typically from a nib.
     self.firebase = [[Firebase alloc] initWithUrl:studentQURL];
-    // Create a reference to a Firebase location
-    [_firebase setValue:@"Do you have data? You'll love Firebase."];
-//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    //[_firebase setValue:@"Do you have data? You'll love Firebase."];//firebase test
+
     self.tableView.dataSource = self;
     
 }
 
+#pragma mark Add Student To Queue Methods
+
 - (IBAction)addStudent:(id)sender {
-    
     
 }
 
