@@ -8,14 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		1386E9A4E8939CA4B701F865 /* libPods-Student Q.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73E8EA21A81A5CA239B70613 /* libPods-Student Q.a */; settings = {ATTRIBUTES = (Required, ); }; };
-		8C02BA2B1ABD450500C38987 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C02BA2A1ABD450500C38987 /* Student.m */; };
 		8C05EC081AB917FB00D96211 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C05EC071AB917FB00D96211 /* main.m */; };
 		8C05EC0B1AB917FB00D96211 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C05EC0A1AB917FB00D96211 /* AppDelegate.m */; };
-		8C05EC0E1AB917FB00D96211 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C05EC0D1AB917FB00D96211 /* ViewController.m */; };
 		8C05EC111AB917FB00D96211 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C05EC0F1AB917FB00D96211 /* Main.storyboard */; };
 		8C05EC131AB917FB00D96211 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C05EC121AB917FB00D96211 /* Images.xcassets */; };
 		8C05EC161AB917FB00D96211 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C05EC141AB917FB00D96211 /* LaunchScreen.xib */; };
 		8C05EC221AB917FB00D96211 /* Student_QTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C05EC211AB917FB00D96211 /* Student_QTests.m */; };
+		8C2ADBE11ACC82AC00CA8996 /* NewUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2ADBE01ACC82AC00CA8996 /* NewUserViewController.m */; };
+		8CDB7ACE1ACC97BF00868249 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CDB7ACD1ACC97BF00868249 /* User.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,21 +32,21 @@
 		33563F92A470983D093BC5EF /* Pods-Student Q.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Student Q.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Student Q/Pods-Student Q.debug.xcconfig"; sourceTree = "<group>"; };
 		5D783C6E6B4CB75A1B4A7AF1 /* Pods-Student Q.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Student Q.release.xcconfig"; path = "Pods/Target Support Files/Pods-Student Q/Pods-Student Q.release.xcconfig"; sourceTree = "<group>"; };
 		73E8EA21A81A5CA239B70613 /* libPods-Student Q.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Student Q.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C02BA291ABD450500C38987 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
-		8C02BA2A1ABD450500C38987 /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
 		8C05EC021AB917FB00D96211 /* Student Q.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Student Q.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C05EC061AB917FB00D96211 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C05EC071AB917FB00D96211 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8C05EC091AB917FB00D96211 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8C05EC0A1AB917FB00D96211 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8C05EC0C1AB917FB00D96211 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8C05EC0D1AB917FB00D96211 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8C05EC101AB917FB00D96211 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8C05EC121AB917FB00D96211 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8C05EC151AB917FB00D96211 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		8C05EC1B1AB917FB00D96211 /* Student QTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Student QTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C05EC201AB917FB00D96211 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C05EC211AB917FB00D96211 /* Student_QTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Student_QTests.m; sourceTree = "<group>"; };
+		8C2ADBDF1ACC82AC00CA8996 /* NewUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewUserViewController.h; sourceTree = "<group>"; };
+		8C2ADBE01ACC82AC00CA8996 /* NewUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewUserViewController.m; sourceTree = "<group>"; };
+		8CDB7ACC1ACC97BF00868249 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		8CDB7ACD1ACC97BF00868249 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,10 +71,10 @@
 		8C02BA261ABCDD6F00C38987 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8C05EC0C1AB917FB00D96211 /* ViewController.h */,
-				8C05EC0D1AB917FB00D96211 /* ViewController.m */,
 				8C05EC091AB917FB00D96211 /* AppDelegate.h */,
 				8C05EC0A1AB917FB00D96211 /* AppDelegate.m */,
+				8C2ADBDF1ACC82AC00CA8996 /* NewUserViewController.h */,
+				8C2ADBE01ACC82AC00CA8996 /* NewUserViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -92,8 +92,8 @@
 		8C02BA281ABCDD8600C38987 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8C02BA291ABD450500C38987 /* Student.h */,
-				8C02BA2A1ABD450500C38987 /* Student.m */,
+				8CDB7ACC1ACC97BF00868249 /* User.h */,
+				8CDB7ACD1ACC97BF00868249 /* User.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -307,10 +307,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C05EC0E1AB917FB00D96211 /* ViewController.m in Sources */,
+				8CDB7ACE1ACC97BF00868249 /* User.m in Sources */,
 				8C05EC0B1AB917FB00D96211 /* AppDelegate.m in Sources */,
 				8C05EC081AB917FB00D96211 /* main.m in Sources */,
-				8C02BA2B1ABD450500C38987 /* Student.m in Sources */,
+				8C2ADBE11ACC82AC00CA8996 /* NewUserViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
