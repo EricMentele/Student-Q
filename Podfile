@@ -3,6 +3,7 @@
 
 target 'Student Q' do
 pod 'Firebase', '>= 2.2.0'
+pod 'CocoaLumberjack'
 end
 
 target 'Student QTests' do
