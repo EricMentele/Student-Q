@@ -74,14 +74,12 @@
 		8C02BA261ABCDD6F00C38987 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8C05EC091AB917FB00D96211 /* AppDelegate.h */,
-				8C05EC0A1AB917FB00D96211 /* AppDelegate.m */,
+				8CDB7AD21AD362AE00868249 /* MyClassesViewController.h */,
+				8CDB7AD31AD362AE00868249 /* MyClassesViewController.m */,
 				8C2ADBDF1ACC82AC00CA8996 /* NewUserViewController.h */,
 				8C2ADBE01ACC82AC00CA8996 /* NewUserViewController.m */,
 				8CDB7ACF1AD3628B00868249 /* ProfileViewController.h */,
 				8CDB7AD01AD3628B00868249 /* ProfileViewController.m */,
-				8CDB7AD21AD362AE00868249 /* MyClassesViewController.h */,
-				8CDB7AD31AD362AE00868249 /* MyClassesViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -137,6 +135,8 @@
 		8C05EC051AB917FB00D96211 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8C05EC091AB917FB00D96211 /* AppDelegate.h */,
+				8C05EC0A1AB917FB00D96211 /* AppDelegate.m */,
 				8C05EC061AB917FB00D96211 /* Info.plist */,
 				8C05EC071AB917FB00D96211 /* main.m */,
 			);
