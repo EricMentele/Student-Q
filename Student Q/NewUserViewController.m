@@ -22,67 +22,64 @@
 @implementation NewUserViewController
 
 - (void)viewDidLoad {
-
     [super viewDidLoad];
-    self.firebase         = [[Firebase alloc] initWithUrl:studentQURL];
-    [self.firebase setValue:nil];
-    NSString *UUID = [[NSUUID UUID] UUIDString];
-    NSString *email = [NSString stringWithFormat:@"eric.mentele.%@@icloud.com", UUID];
-    [self.firebase createUser:email password:@"password"
-     withValueCompletionBlock:^(NSError *error, NSDictionary *authUser) {
-         // check to see if account was created ok
-         if (error) {
-             DDLogError(@"%@", error);
-         } else {
-             NSLog(@"Successfully created user account with uid: %@", authUser[@"uid"]);
-         }
-         DDLogInfo(@"email %@", email);
-         // add profile info for the newly created user
-        Firebase *users       = [self.firebase childByAppendingPath:@"users"];
-        Firebase *user        = [users childByAutoId];
-        NSDictionary *profile = @{
-            @"userID"         : authUser[@"uid"],
-            @"fullName"       : [NSString stringWithFormat:@"Eric Mentele %@", UUID],
-            @"profilePicture" : @"some path to picture"
-         };
-         [user setValue:profile];
-
-         // add class to be reused by any user
-         Firebase *classes     = [self.firebase childByAppendingPath:@"classes"];
-         Firebase *class       = [classes childByAutoId];
-         NSDictionary *classInfo   = @{
-             @"className"  : @"iOS Fundamentals",
-             @"location" : @"",
-             @"classOwnerID" : authUser[@"uid"],
-             @"taCode" : @"5678",
-             @"studentCode": @"5642",
-             @"helpQueue": @{
-            }
-        };
-         [class setValue:classInfo];
-         
-         // add user created above as teacher of the newly created class
-         Firebase *userClasses = [user childByAppendingPath:@"classes"];
-         Firebase *userClass   = [userClasses childByAppendingPath:class.key];
-         NSDictionary *userClassInfo = @{
-                                         @"classRole": @"Teacher",
-                                         @"presence": @(1)
-                                         };
-         [userClass setValue:userClassInfo];
-         
-         // add second user
-         // queue second user for help in class
-    }];
-
+    
+    self.firebase                          = [[Firebase alloc] initWithUrl:studentQURL];
+    
 }
 
-#pragma mark Add Student To Queue Methods
+
+#pragma mark Keyboard handling
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardOn:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardOff:) name:UIKeyboardWillHideNotification object:nil];
+}
 
 
+- (void)viewWillDisappear:(BOOL)animated {
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
+}
 
+
+- (void)keyboardOn:(NSNotification*)notification {
+    
+    UIBarButtonItem *doneButton            = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(keyboardOff:)];
+    self.navigationItem.rightBarButtonItem = doneButton;
+}
+
+
+- (void)keyboardOff:(NSNotificationCenter*)notification {
+    
+    [self.view endEditing:YES];
+}
+
+
+#pragma mark New User
 - (IBAction)addUser:(id)sender {
-
-   }
+    
+    [self.firebase createUser:self.emailTextField.text password:self.passwordTextField.text withCompletionBlock:^(NSError *error) {
+        
+        if (error) {
+            DDLogError(@"%@", error);
+        } else {
+            NSLog(@"Successfully created user account!");
+        }
+        //DDLogInfo(@"email %@", email);
+        // add profile info for the newly created user
+        Firebase *users                        = [self.firebase childByAppendingPath:@"users"];
+        Firebase *user                         = [users childByAutoId];
+        NSDictionary *profile                  = @{
+                                                   @"userID"         : user.key,
+                                                   @"fullName"       : self.nameTextField.text,
+                                                   @"profilePicture" : @"some path to picture"
+                                                   };
+        [user setValue:profile];
+    }];
+    
+}
 
 
 
