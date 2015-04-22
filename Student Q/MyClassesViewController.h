@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <Firebase/Firebase.h> 
 
 @interface MyClassesViewController : UIViewController
 
+@property (nonatomic,strong) Firebase *firebase;
 @end

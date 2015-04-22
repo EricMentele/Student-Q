@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Photos/Photos.h>
+#import <Firebase/Firebase.h>
 
 @interface ProfileViewController : UIViewController
+
+
 
 @end

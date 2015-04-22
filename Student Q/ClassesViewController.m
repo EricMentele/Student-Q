@@ -1,29 +1,22 @@
 //
-//  ProfileViewController.m
+//  ClassesViewController.m
 //  Student Q
 //
-//  Created by Eric Mentele on 4/6/15.
+//  Created by Eric Mentele on 4/16/15.
 //  Copyright (c) 2015 Eric Mentele. All rights reserved.
 //
 
-#import "ProfileViewController.h"
+#import "ClassesViewController.h"
 
-@interface ProfileViewController ()
+@interface ClassesViewController ()
 
-@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *userImage;
 @end
 
-@implementation ProfileViewController
+@implementation ClassesViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-}
-
-- (IBAction)editImage:(id)sender {
-    
-    
 }
 
 - (void)didReceiveMemoryWarning {

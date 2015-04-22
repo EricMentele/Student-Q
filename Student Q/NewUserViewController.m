@@ -16,7 +16,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
-
 @end
 
 @implementation NewUserViewController
@@ -25,6 +24,7 @@
     [super viewDidLoad];
     
     self.firebase                          = [[Firebase alloc] initWithUrl:studentQURL];
+    //[self.firebase setValue:nil];
     
 }
 
@@ -54,30 +54,51 @@
 - (void)keyboardOff:(NSNotificationCenter*)notification {
     
     [self.view endEditing:YES];
+    self.navigationItem.rightBarButtonItem = false;
 }
 
 
-#pragma mark New User
 - (IBAction)addUser:(id)sender {
-    
-    [self.firebase createUser:self.emailTextField.text password:self.passwordTextField.text withCompletionBlock:^(NSError *error) {
+    Firebase *newUserRef                   = self.firebase;
+    [newUserRef createUser:self.emailTextField.text password:self.passwordTextField.text withValueCompletionBlock:^(NSError *error, NSDictionary *result) {
         
         if (error) {
             DDLogError(@"%@", error);
         } else {
             NSLog(@"Successfully created user account!");
+            [[NSUserDefaults standardUserDefaults] setObject:self.emailTextField.text forKey:@"email"];
+            [[NSUserDefaults standardUserDefaults] setObject:self.passwordTextField.text forKey:@"password"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
         }
         //DDLogInfo(@"email %@", email);
         // add profile info for the newly created user
         Firebase *users                        = [self.firebase childByAppendingPath:@"users"];
         Firebase *user                         = [users childByAutoId];
         NSDictionary *profile                  = @{
-                                                   @"userID"         : user.key,
+                                                   @"userID"         : result[@"uid"],
                                                    @"fullName"       : self.nameTextField.text,
                                                    @"profilePicture" : @"some path to picture"
                                                    };
         [user setValue:profile];
     }];
+    
+    NSString *email                        = [[NSUserDefaults standardUserDefaults]stringForKey:@"email"];
+    NSString *password                     = [[NSUserDefaults standardUserDefaults]stringForKey:@"password"];
+    
+    [self.firebase authUser:email password:password withCompletionBlock:^(NSError *error, FAuthData *authData) {
+        
+        if (authData == nil) {
+            
+        }
+        else if (error) {
+            DDLogError(@"%@", error);
+            
+        } else {
+            DDLogInfo(@"Logged in!");
+        }
+    }];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
     
 }
 
