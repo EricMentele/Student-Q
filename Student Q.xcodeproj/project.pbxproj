@@ -15,6 +15,9 @@
 		8C05EC161AB917FB00D96211 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C05EC141AB917FB00D96211 /* LaunchScreen.xib */; };
 		8C05EC221AB917FB00D96211 /* Student_QTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C05EC211AB917FB00D96211 /* Student_QTests.m */; };
 		8C2ADBE11ACC82AC00CA8996 /* NewUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2ADBE01ACC82AC00CA8996 /* NewUserViewController.m */; };
+		8C6CCC961AE09914008E3360 /* ClassesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6CCC951AE09914008E3360 /* ClassesViewController.m */; };
+		8C6CCC991AE09925008E3360 /* NewClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6CCC981AE09925008E3360 /* NewClassViewController.m */; };
+		8C6CCC9C1AE2D9A9008E3360 /* CurrentClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6CCC9B1AE2D9A9008E3360 /* CurrentClassViewController.m */; };
 		8CDB7AD11AD3628B00868249 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CDB7AD01AD3628B00868249 /* ProfileViewController.m */; };
 		8CDB7AD41AD362AE00868249 /* MyClassesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CDB7AD31AD362AE00868249 /* MyClassesViewController.m */; };
 /* End PBXBuildFile section */
@@ -46,6 +49,12 @@
 		8C05EC211AB917FB00D96211 /* Student_QTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Student_QTests.m; sourceTree = "<group>"; };
 		8C2ADBDF1ACC82AC00CA8996 /* NewUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewUserViewController.h; sourceTree = "<group>"; };
 		8C2ADBE01ACC82AC00CA8996 /* NewUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewUserViewController.m; sourceTree = "<group>"; };
+		8C6CCC941AE09914008E3360 /* ClassesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassesViewController.h; sourceTree = "<group>"; };
+		8C6CCC951AE09914008E3360 /* ClassesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassesViewController.m; sourceTree = "<group>"; };
+		8C6CCC971AE09925008E3360 /* NewClassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewClassViewController.h; sourceTree = "<group>"; };
+		8C6CCC981AE09925008E3360 /* NewClassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewClassViewController.m; sourceTree = "<group>"; };
+		8C6CCC9A1AE2D9A9008E3360 /* CurrentClassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentClassViewController.h; sourceTree = "<group>"; };
+		8C6CCC9B1AE2D9A9008E3360 /* CurrentClassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentClassViewController.m; sourceTree = "<group>"; };
 		8CDB7ACF1AD3628B00868249 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		8CDB7AD01AD3628B00868249 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		8CDB7AD21AD362AE00868249 /* MyClassesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyClassesViewController.h; sourceTree = "<group>"; };
@@ -80,6 +89,12 @@
 				8C2ADBE01ACC82AC00CA8996 /* NewUserViewController.m */,
 				8CDB7ACF1AD3628B00868249 /* ProfileViewController.h */,
 				8CDB7AD01AD3628B00868249 /* ProfileViewController.m */,
+				8C6CCC941AE09914008E3360 /* ClassesViewController.h */,
+				8C6CCC951AE09914008E3360 /* ClassesViewController.m */,
+				8C6CCC971AE09925008E3360 /* NewClassViewController.h */,
+				8C6CCC981AE09925008E3360 /* NewClassViewController.m */,
+				8C6CCC9A1AE2D9A9008E3360 /* CurrentClassViewController.h */,
+				8C6CCC9B1AE2D9A9008E3360 /* CurrentClassViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -312,11 +327,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C6CCC991AE09925008E3360 /* NewClassViewController.m in Sources */,
 				8CDB7AD41AD362AE00868249 /* MyClassesViewController.m in Sources */,
 				8C05EC0B1AB917FB00D96211 /* AppDelegate.m in Sources */,
 				8C05EC081AB917FB00D96211 /* main.m in Sources */,
+				8C6CCC961AE09914008E3360 /* ClassesViewController.m in Sources */,
 				8CDB7AD11AD3628B00868249 /* ProfileViewController.m in Sources */,
 				8C2ADBE11ACC82AC00CA8996 /* NewUserViewController.m in Sources */,
+				8C6CCC9C1AE2D9A9008E3360 /* CurrentClassViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

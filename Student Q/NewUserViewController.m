@@ -54,12 +54,12 @@
 - (void)keyboardOff:(NSNotificationCenter*)notification {
     
     [self.view endEditing:YES];
+    self.navigationItem.rightBarButtonItem = false;
 }
 
 
-#pragma mark New User
 - (IBAction)addUser:(id)sender {
-    Firebase *newUserRef = self.firebase;
+    Firebase *newUserRef                   = self.firebase;
     [newUserRef createUser:self.emailTextField.text password:self.passwordTextField.text withValueCompletionBlock:^(NSError *error, NSDictionary *result) {
         
         if (error) {
@@ -82,8 +82,8 @@
         [user setValue:profile];
     }];
     
-    NSString *email                  = [[NSUserDefaults standardUserDefaults]stringForKey:@"email"];
-    NSString *password               = [[NSUserDefaults standardUserDefaults]stringForKey:@"password"];
+    NSString *email                        = [[NSUserDefaults standardUserDefaults]stringForKey:@"email"];
+    NSString *password                     = [[NSUserDefaults standardUserDefaults]stringForKey:@"password"];
     
     [self.firebase authUser:email password:password withCompletionBlock:^(NSError *error, FAuthData *authData) {
         
